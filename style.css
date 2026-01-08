@@ -29,19 +29,26 @@ body {
     overflow-y: auto;
 }
 
-.profile-img {
+/* Container for the profile image */
+.profile-container {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
     margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 4px solid #27272a;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    overflow: hidden; /* This clips the image into a circle */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    border: 4px solid #27272a;
+}
+
+/* Image specific styling */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This prevents the image from stretching */
+    display: block;
 }
 
 .sidebar h1 {
